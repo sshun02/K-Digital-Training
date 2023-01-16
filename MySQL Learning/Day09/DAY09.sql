@@ -5,8 +5,8 @@ select now();
 
 # USE MY_EMP 
 -- Q2) SELECT 컬럼리스트,,, FROM 테이블 명;
--- 사원 테이블의 있는 전체 내용을 확인 해보자.
 
+-- 사원 테이블의 있는 전체 내용을 확인 해보자.
 select *
 from emp;
 
@@ -17,9 +17,9 @@ from dept;
 -- Q4) my_emp의 내용중에 전체 테이블 목록을 확인 해 보자.
 show tables;
 
--- Q5) 사원 테입ㄹ의 스키마 구조를 확인 해 보자.[필드명, 데이터타입. 널값 유무, 키값, 기본값, 시퀸스값]
+-- Q5) 사원 테이블의 스키마 구조를 확인 해 보자.[필드명, 데이터타입. 널값 유무, 키값, 기본값, 시퀸스값]
 desc emp;
-describe emp;
+describe emp; #테이블 구조 확인
 
 -- Q6) 사원 테이블에서 사원의 이름, 번호, 매니저, 봉급을 출력해보자.
 select ENAME, EMPNO, MGR, SAL
