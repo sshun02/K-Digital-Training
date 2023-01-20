@@ -1,0 +1,19 @@
+
+========================================
+# 컨텐츠 가져오기
+time.sleep(3)
+contents = driver.find_elements(By.CSS_SELECTOR,'#browse-results > div > .col')
+titles = []
+for content in contents:
+    title = content.find_element(By.CSS_SELECTOR,'.media > .media__message .ga-link').text
+    titles.append(title)
+titles[-5:]
+==========================================
+# 테드 에서 컨텐츠 링크 리스트 가져오기
+time.sleep(3)
+contents = driver.find_elements(By.CSS_SELECTOR,'#browse-results > div > .col')
+links = []
+for content in contents:
+    link = content.find_element(By.CSS_SELECTOR,'.media > .media__message .ga-link').get_attribute('href')
+    links.append(link)
+links[-5:]
