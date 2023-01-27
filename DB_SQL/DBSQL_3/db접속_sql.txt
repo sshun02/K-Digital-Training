@@ -1,0 +1,41 @@
+sql = """
+    CREATE TABLE product (
+        PRODUCT_CODE VARCHAR(20) NOT NULL,
+        TITLE VARCHAR(200) NOT NULL,
+        ORI_PRICE INT,
+        DISCOUNT_PRICE INT,
+        DISCOUNT_PERCENT INT,
+        DELIVERY VARCHAR(2),
+        PRIMARY KEY(PRODUCT_CODE)
+    );
+"""
+
+sql = '''
+    CREATE TABLE product2 (
+        PRODUCT_CODE VARCHAR(20) NOT NULL,
+        TITLE VARCHAR(200) NOT NULL,
+        ORI_PRICE INT,
+        DISCOUNT_PRICE INT,
+        DISCOUNT_PERCENT INT,
+        DELIVERY VARCHAR(2),
+        PRIMARY KEY(PRODUCT_CODE)
+    );
+'''
+
+
+sql = """INSERT INTO product2 VALUES(
+    '""" + str(product_code)+  """', '스위트바니 여름신상5900원~롱원피스티셔츠/긴팔/반팔', 23000, 6900, 70, 'F'); """
+
+
+
+sql = """
+UPDATE product2 SET 
+    TITLE='하늘하늘 원피스 썸머 스페셜 가디건', 
+    ORI_PRICE=33000, 
+    DISCOUNT_PRICE=9900, 
+    DISCOUNT_PERCENT=70 
+    WHERE PRODUCT_CODE='216573141';
+"""
+
+
+sql = "select * from product2 where product_code='216573141';"
